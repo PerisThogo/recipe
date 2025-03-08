@@ -24,7 +24,7 @@ header {
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 24px; /* Smaller font size for mobile */
     font-weight: bold;
     color: #213032;
 }
@@ -37,7 +37,7 @@ header {
 .nav-bar ul li a {
     display: block;
     color: #edffef;
-    font-size: 18px;
+    font-size: 16px; /* Smaller font size for mobile */
     padding: 8px 15px;
     transition: 0.2s;
     text-decoration: none;
@@ -68,20 +68,20 @@ header {
 
 .hero h1 {
     color: #213032;
-    font-size: 48px;
+    font-size: 36px; /* Smaller font size for mobile */
     margin: 20px 0;
 }
 
 .hero h3 {
     color: #edffef;
-    font-size: 20px;
+    font-size: 18px; /* Smaller font size for mobile */
     margin-bottom: 30px;
 }
 
 .hero h4 {
     color: #edffef;
     letter-spacing: 2px;
-    font-size: 18px;
+    font-size: 16px; /* Smaller font size for mobile */
 }
 
 .button {
@@ -104,7 +104,7 @@ header {
 /* About Section */
 .about {
     width: 100%;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Reduced padding for mobile */
     background-color: #314e52;
 }
 
@@ -127,7 +127,7 @@ header {
 
 .about h2 {
     color: #edffef;
-    font-size: 48px;
+    font-size: 36px; /* Smaller font size for mobile */
     text-transform: capitalize;
     margin-bottom: 20px;
     text-align: center;
@@ -150,13 +150,13 @@ header {
 /* Recipe Section */
 .recipe {
     width: 100%;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Reduced padding for mobile */
     background-color: #213032;
 }
 
 .recipe h2 {
     color: #edffef;
-    font-size: 48px;
+    font-size: 36px; /* Smaller font size for mobile */
     text-transform: capitalize;
     margin-bottom: 20px;
     text-align: center;
@@ -249,13 +249,13 @@ header {
 /* Categories Section */
 .categories {
     width: 100%;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Reduced padding for mobile */
     background-color: #314e52;
 }
 
 .categories h2 {
     color: #edffef;
-    font-size: 48px;
+    font-size: 36px; /* Smaller font size for mobile */
     text-transform: capitalize;
     margin-bottom: 20px;
     text-align: center;
@@ -338,7 +338,7 @@ header {
 
 /* Contact Section */
 .contact {
-    padding: 100px 20px;
+    padding: 50px 20px; /* Reduced padding for mobile */
     background: #182f32;
 }
 
@@ -346,7 +346,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 20px; /* Reduced gap for mobile */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -482,15 +482,15 @@ footer h5 {
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 28px; /* Smaller font size for mobile */
     }
 
     .hero h3 {
-        font-size: 18px;
+        font-size: 16px; /* Smaller font size for mobile */
     }
 
     .hero h4 {
-        font-size: 16px;
+        font-size: 14px; /* Smaller font size for mobile */
     }
 
     .about .main {
@@ -503,7 +503,7 @@ footer h5 {
     }
 
     .recipe h2, .categories h2 {
-        font-size: 36px;
+        font-size: 28px; /* Smaller font size for mobile */
     }
 
     .card, .ca-card {
@@ -514,19 +514,19 @@ footer h5 {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 28px;
+        font-size: 24px; /* Smaller font size for mobile */
     }
 
     .hero h3 {
-        font-size: 16px;
+        font-size: 14px; /* Smaller font size for mobile */
     }
 
     .hero h4 {
-        font-size: 14px;
+        font-size: 12px; /* Smaller font size for mobile */
     }
 
     .about h2, .recipe h2, .categories h2 {
-        font-size: 28px;
+        font-size: 24px; /* Smaller font size for mobile */
     }
 
     .contact-info, .contact-form {
