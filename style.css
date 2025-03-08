@@ -24,9 +24,26 @@ header {
 }
 
 .logo {
-    font-size: 24px; /* Smaller font size for mobile */
+    font-size: 24px;
     font-weight: bold;
     color: #213032;
+}
+
+/* Hide the checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Hide the menu icon on larger screens */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #213032;
+}
+
+.menu-icon:hover {
+    color: #97a2a3;
 }
 
 .nav-bar ul {
@@ -37,7 +54,7 @@ header {
 .nav-bar ul li a {
     display: block;
     color: #edffef;
-    font-size: 16px; /* Smaller font size for mobile */
+    font-size: 16px;
     padding: 8px 15px;
     transition: 0.2s;
     text-decoration: none;
@@ -52,23 +69,16 @@ header {
 .hero {
     height: 100vh;
     width: 100%;
+    background-color: #314e52; /* Fallback color */
     background-image: url(images/hero.jpg);
     background-position: center;
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .hero {
-        background-size: contain; /* Ensures the entire image is visible on smaller screens */
-        background-position: top center; /* Adjusts the position for better visibility */
-    }
 }
 
 .hero .content {
@@ -77,20 +87,20 @@ header {
 
 .hero h1 {
     color: #213032;
-    font-size: 36px; /* Smaller font size for mobile */
+    font-size: 36px;
     margin: 20px 0;
 }
 
 .hero h3 {
     color: #edffef;
-    font-size: 18px; /* Smaller font size for mobile */
+    font-size: 18px;
     margin-bottom: 30px;
 }
 
 .hero h4 {
     color: #edffef;
     letter-spacing: 2px;
-    font-size: 16px; /* Smaller font size for mobile */
+    font-size: 16px;
 }
 
 .button {
@@ -113,7 +123,7 @@ header {
 /* About Section */
 .about {
     width: 100%;
-    padding: 50px 20px; /* Reduced padding for mobile */
+    padding: 50px 20px;
     background-color: #314e52;
 }
 
@@ -136,7 +146,7 @@ header {
 
 .about h2 {
     color: #edffef;
-    font-size: 36px; /* Smaller font size for mobile */
+    font-size: 36px;
     text-transform: capitalize;
     margin-bottom: 20px;
     text-align: center;
@@ -159,13 +169,13 @@ header {
 /* Recipe Section */
 .recipe {
     width: 100%;
-    padding: 50px 20px; /* Reduced padding for mobile */
+    padding: 50px 20px;
     background-color: #213032;
 }
 
 .recipe h2 {
     color: #edffef;
-    font-size: 36px; /* Smaller font size for mobile */
+    font-size: 36px;
     text-transform: capitalize;
     margin-bottom: 20px;
     text-align: center;
@@ -258,13 +268,13 @@ header {
 /* Categories Section */
 .categories {
     width: 100%;
-    padding: 50px 20px; /* Reduced padding for mobile */
+    padding: 50px 20px;
     background-color: #314e52;
 }
 
 .categories h2 {
     color: #edffef;
-    font-size: 36px; /* Smaller font size for mobile */
+    font-size: 36px;
     text-transform: capitalize;
     margin-bottom: 20px;
     text-align: center;
@@ -347,7 +357,7 @@ header {
 
 /* Contact Section */
 .contact {
-    padding: 50px 20px; /* Reduced padding for mobile */
+    padding: 50px 20px;
     background: #182f32;
 }
 
@@ -355,7 +365,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Reduced gap for mobile */
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -472,34 +482,43 @@ footer h5 {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    /* Show the menu icon on mobile */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide the navigation bar by default */
     .nav-bar ul {
         flex-direction: column;
         background: #acb4b5;
         position: absolute;
-        top: 80px;
+        top: 80px; /* Position below the header */
         left: 0;
         width: 100%;
-        display: none;
+        display: none; /* Hidden by default */
     }
 
-    .nav-bar ul.active {
-        display: flex;
+    /* Show the navigation bar when the checkbox is checked */
+    .menu-toggle:checked ~ .nav-bar ul {
+        display: flex; /* Show when checked */
     }
 
     .nav-bar ul li a {
         padding: 10px 20px;
+        text-align: center; /* Center-align menu items */
     }
 
+    /* Adjust hero section for mobile */
     .hero h1 {
-        font-size: 28px; /* Smaller font size for mobile */
+        font-size: 28px;
     }
 
     .hero h3 {
-        font-size: 16px; /* Smaller font size for mobile */
+        font-size: 16px;
     }
 
     .hero h4 {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 14px;
     }
 
     .about .main {
@@ -512,7 +531,7 @@ footer h5 {
     }
 
     .recipe h2, .categories h2 {
-        font-size: 28px; /* Smaller font size for mobile */
+        font-size: 28px;
     }
 
     .card, .ca-card {
@@ -523,19 +542,19 @@ footer h5 {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 24px;
     }
 
     .hero h3 {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 14px;
     }
 
     .hero h4 {
-        font-size: 12px; /* Smaller font size for mobile */
+        font-size: 12px;
     }
 
     .about h2, .recipe h2, .categories h2 {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 24px;
     }
 
     .contact-info, .contact-form {
