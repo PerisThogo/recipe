@@ -1,0 +1,535 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: #acb4b5;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #213032;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: #edffef;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #97a2a3;
+    color: #213032;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero .content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    color: #213032;
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.hero h3 {
+    color: #edffef;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero h4 {
+    color: #edffef;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.button {
+    background-color: #213032;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.4s;
+}
+
+.button:hover {
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+/* About Section */
+.about {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: #314e52;
+}
+
+.about img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    border-radius: 20px 0 20px 0;
+}
+
+.main {
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about h2 {
+    color: #edffef;
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-text {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.about-text p {
+    color: #97a2a3;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Recipe Section */
+.recipe {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: #213032;
+}
+
+.recipe h2 {
+    color: #edffef;
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(237, 255, 239, 0.9);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .content {
+    padding: 15px;
+    color: #182f32;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card details {
+    margin-top: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card summary {
+    background-color: #213032;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.card summary:hover {
+    background-color: #97a2a3;
+    color: #213032;
+}
+
+.card details[open] summary {
+    background-color: #97a2a3;
+    color: #213032;
+}
+
+.card details p {
+    padding: 10px;
+    background-color: rgba(237, 255, 239, 0.9);
+    color: #182f32;
+    margin-top: 10px;
+    border-radius: 4px;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+/* Categories Section */
+.categories {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: #314e52;
+}
+
+.categories h2 {
+    color: #edffef;
+    font-size: 48px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ca-card {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border: 5px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ca-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ca-card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: rgba(237, 255, 239, 0.9);
+    color: #182f32;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.ca-card:hover .content {
+    opacity: 1;
+}
+
+.ca-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ca-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.ca-card details {
+    margin-top: 10px;
+}
+
+.ca-card summary {
+    background-color: #213032;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ca-card summary:hover {
+    background-color: #97a2a3;
+    color: #213032;
+}
+
+.ca-card details[open] summary {
+    background-color: #97a2a3;
+    color: #213032;
+}
+
+.ca-card details p {
+    padding: 10px;
+    background-color: rgba(237, 255, 239, 0.9);
+    color: #182f32;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    background: #182f32;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: #213032;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #edffef;
+    text-align: center;
+}
+
+.contact-info p {
+    color: #97a2a3;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    color: #edffef;
+    font-size: 16px;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #97a2a3;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #314e52;
+    color: #edffef;
+    outline: none;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #97a2a3;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #edffef;
+}
+
+.contact-form button {
+    background-color: #213032;
+    color: #fff;
+    border: 2px solid #97a2a3;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #97a2a3;
+    color: #213032;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background: #182f32;
+    text-align: center;
+}
+
+footer h5 {
+    font-size: 18px;
+    color: #97a2a3;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    color: #97a2a3;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+.social-icon:hover {
+    color: #314e52;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        background: #acb4b5;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-bar ul.active {
+        display: flex;
+    }
+
+    .nav-bar ul li a {
+        padding: 10px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .hero h4 {
+        font-size: 16px;
+    }
+
+    .about .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        margin-top: 20px;
+    }
+
+    .recipe h2, .categories h2 {
+        font-size: 36px;
+    }
+
+    .card, .ca-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h3 {
+        font-size: 16px;
+    }
+
+    .hero h4 {
+        font-size: 14px;
+    }
+
+    .about h2, .recipe h2, .categories h2 {
+        font-size: 28px;
+    }
+
+    .contact-info, .contact-form {
+        margin: 10px;
+    }
+}
