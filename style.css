@@ -54,12 +54,21 @@ header {
     width: 100%;
     background-image: url(images/hero.jpg);
     background-position: center;
-    background-size: cover;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 20px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .hero {
+        background-size: contain; /* Ensures the entire image is visible on smaller screens */
+        background-position: top center; /* Adjusts the position for better visibility */
+    }
 }
 
 .hero .content {
